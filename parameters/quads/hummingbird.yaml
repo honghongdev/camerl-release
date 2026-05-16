@@ -1,0 +1,21 @@
+mass:               0.720                     # [kg]
+tbm_fr:             [0.0, -0.67, 0.0]         # [m] # motor 0
+tbm_bl:             [0.0, 0.17, 0.0]          # [m] # motor 1
+tbm_br:             [-0.17, 0.0, 0.0]          # [m] # motor 2
+tbm_fl:             [0.17, 0.0, 0.0]          # [m] # motor 3
+inertia:            [0.007, 0.007, 0.012]     # [kgm^2]
+motor_omega_min:    0.0                       # [rad/s]
+motor_omega_max:    838.0                     # [rad/s]
+motor_tau:          0.05                      # [s]
+omega_max:          [6.0, 6.0, 6.0]           # [rad/s]
+
+thrust_map:         [8.54858e-06, 0.0, 0.0]   # [N/(rad/s)^2, N/(rad/s), N]
+kappa:              0.05                     # [Nm/N]
+thrust_min:         0.0                       # [N]
+thrust_max:         6                       # [N] per motor
+rotors_config:      "plus"
+omega_max:          [8.0, 8.0, 8.0]
+
+aero_coeff_1:       [0.0, 0.0, 0.0] # [N/(v/m)]
+aero_coeff_3:       [0.0, 0.0, 0.0] # [N/(v/m)]
+aero_coeff_h:        0.0            # [N/(v^2/m^2)]

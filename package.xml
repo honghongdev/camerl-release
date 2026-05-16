@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>camerl</name>
+  <version>0.0.1</version>
+  <description>ROS-Wrapper for AgiLib</description>
+
+  <maintainer email="anonymous@anonymous.org">Anonymous</maintainer>
+
+  <license>GNU GPL</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <depend>agilib</depend>
+  <depend>agiros_msgs</depend>
+  <depend>rpg_quadrotor_msgs</depend>
+  <depend>avoid_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>mav_msgs</depend>
+  <depend>message_generation</depend> 
+  <depend>message_runtime</depend> 
+
+</package>

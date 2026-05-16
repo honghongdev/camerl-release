@@ -1,0 +1,67 @@
+unity:
+  scene_id: 1 # 0 warehouse, 1 garage, 3 natureforest
+  render: yes
+  spawn_trees: false
+  spawn_objects: true
+  start_area: [16, 2.6]
+  start_origin: [0, -0.8]
+  radius_area: 0.5
+  radius_origin: 3
+  end_area: [16, 2.6]
+  end_origin: [0, 30]
+  bounding_box: [20.0, 30.0] # spawn objects within this bounding box
+  bounding_box_origin: [-10.0, 3.0] # relative to the quadrotor start position
+  min_object_scale: [0.1, 0.1, 3]
+  max_object_scale: [1.0, 1.0, 3]
+  basic_size: [1.0, 1.0, 2]
+  if_get_pointcloud: true
+  range: [20, 38, 9]
+  origin: [0.0, 16.5, 4.5]
+  res: 0.10
+
+drone:
+  length: 0.2
+  width: 0.2
+
+simulation:
+  seed: 21
+  sim_dt: 0.1
+  max_t: 5.0
+  action_mode: 1 # 0 velocity, 1 acceleration
+  num_envs: 1
+  num_threads: 1
+  act_max: [4.0, 4.0, 1.0, 0.6]
+  act_min: [-4.0, -4.0, -1.0, -0.6]
+  reset_if_collide: false
+  use_stereo_vision: false
+
+rewards:
+  colli_coeff: -0.00 # reward coefficient for position
+  distance_coeff: -0.001 # reward coefficient for orientation
+  vel_coeff: -0.000 # reward coefficient for linear velocity
+  vert_coeff: -0.002 # reward coefficient for changes of input
+  angle_vel_coeff: -0.003 # reward coefficient for angular velocity
+  input_coeff: -0.0003 # reward coefficient for changes of input
+  yaw_coeff: -0.003
+  names:
+    [
+      "goal_penalty",
+      "speed_penalty",
+      "vertical_penalty",
+      "angular_penalty",
+      "input_penalty",
+      "yaw_penalty",
+      "total",
+    ]
+
+rgb_camera:
+  on: yes
+  t_BC: [0.2, 0.0, 0.3] # translational vector of the camera with repect to the body frame
+  r_BC: [0.0, 0.0, 90.0] # rotational angle (roll, pitch, yaw) of the camera in degree.
+  channels: 3
+  width: 256
+  height: 256
+  fov: 70.0
+  enable_depth: yes
+  enable_segmentation: no
+  enable_opticalflow: no

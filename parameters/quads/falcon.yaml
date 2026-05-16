@@ -1,0 +1,16 @@
+mass:               0.800                     # [kg]
+arm_length:         0.15                      # [m]
+inertia:            [0.007, 0.007, 0.012]     # [kgm^2]
+motor_omega_min:    192.0                       # [rad/s]
+motor_omega_max:    1792.0                     # [rad/s]
+motor_tau_inv:      20.0                      # [1/s]
+omega_max:          [18.0, 18.0, 9.0]           # [rad/s]
+
+thrust_map:         [1.25e-5, 0.011, -3.0]   # [N/(rad/s)^2, N/(rad/s), N] per motor
+kappa:              0.016                     # [Nm/N]
+thrust_min:         0.0                       # [N]
+thrust_max:         14.2                       # [N] per motor
+
+aero_coeff_1:       [0.0, 0.0, 0.0] # [N/(v/m)]
+aero_coeff_3:       [0.0, 0.0, 0.0] # [N/(v/m)]
+aero_coeff_h:        0.0            # [N/(v^2/m^2)]

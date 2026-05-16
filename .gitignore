@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Training / runtime artifacts
+saved/
+exp_vae/
+exp_lstm/
+ckpts/
+debug/
+coll_imgs/
+runs/
+
+# Weights and data
+*.pth
+*.tar
+*.npz
+*.pkl
+
+# ROS / catkin
+devel/
+.catkin_workspace
+CATKIN_IGNORE
+*.pyc
+
+# Developer-annotated scripts (kept locally)
+scripts_dev/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# Claude Code
+.claude/
+
+# Additional weight formats
+*.pt
+*.ckpt

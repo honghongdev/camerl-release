@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="quad_name" default="hummingbird"/>
+
+    <group ns="$(arg quad_name)">
+
+        <!-- controller -->
+        <node name="agiros_pilot" pkg="camerl" type="camerl" output="screen" >
+            <param name="agi_param_dir" value="$(find agilib)/params"/>
+            <param name="ros_param_dir" value="$(find camerl)/parameters"/>
+            <param name="pilot_config" value="rotors_hummingbird_pilot.yaml"/>
+            <remap from="agiros_pilot/odometry_estimate" to="/$(arg quad_name)/ground_truth/odometry"/>
+            <remap from="agiros_pilot/imu_in" to="/$(arg quad_name)/imu"/>
+            <remap from="agiros_pilot/task_state" to="/$(arg quad_name)/task_state"/>
+            <remap from="command/rates_command" to="/$(arg quad_name)/autopilot/control_command_input"/>
+        </node>
+
+    </group>
+</launch>
